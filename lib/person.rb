@@ -1,3 +1,5 @@
 class Person
-  def initialize ()
+  def initialize (attributes)
+    attributes.each {|key, value| self.send(("#{key}="), value)}
+  end
 end
